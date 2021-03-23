@@ -45,6 +45,14 @@ def moyenne_comprehension(liste):
 print(moyenne_comprehension(notes_eleve1))
 
 ##c- Fonction qui calcule moyenne d'un élève dans une matière.
+notes = [note1, note2, note3, note4, note5, note6,note7,note8]
+def moyenne_tuples(notes,eleve,matiere):
+  eleve=[note for note in notes if note[0]==eleve]
+  print(eleve)
+  matiere=[note for note in eleve if note[1]==matiere]
+  print(matiere)
+  notes=[note[2] for note in eleve and matiere]
+  res=sum(notes)/len(notes)
+  return res
 
-def moyenne_tuples(notes,eleves,matieres):
-  eleve=[note for note in notes ]
+print(moyenne_tuples(notes,"eleve1","math"))
